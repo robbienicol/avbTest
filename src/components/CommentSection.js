@@ -21,14 +21,16 @@ const CommentSection = ({ setShowModal, comments }) => {
   });
   return (
     <div>
-      <h1>Comments</h1>
-      <Button
-        onClick={() => setShowModal(true)}
-        color="primary"
-        variant="outlined"
-      >
-        Add Comment
-      </Button>
+      <div className="header">
+        <h1>Comments</h1>
+        <Button
+          onClick={() => setShowModal(true)}
+          color="primary"
+          variant="outlined"
+        >
+          Add Comment
+        </Button>
+      </div>
       {Comments}
     </div>
   );
