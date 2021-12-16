@@ -52,7 +52,7 @@ export default function AddModal({
             <TextField
               id="outlined-basic"
               label="Add Comment"
-              onChange={(e) => setNameInput(e.target.value)}
+              onChange={(e) => setCommentInput(e.target.value)}
               variant="outlined"
             />
 
