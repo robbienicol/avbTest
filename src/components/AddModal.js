@@ -34,12 +34,6 @@ export default function AddModal({
       ...comments,
     ]);
   };
-  const NameValue = (e) => {
-    setNameInput(e.target.value);
-  };
-  const CommentValue = (e) => {
-    setCommentInput(e.target.value);
-  };
 
   return (
     <div>
@@ -52,13 +46,13 @@ export default function AddModal({
             <TextField
               id="outlined-basic"
               label="Add Name"
-              onChange={NameValue}
+              onChange={(e) => setNameInput(e.target.value)}
               variant="outlined"
             />
             <TextField
               id="outlined-basic"
               label="Add Comment"
-              onChange={CommentValue}
+              onChange={(e) => setNameInput(e.target.value)}
               variant="outlined"
             />
 
