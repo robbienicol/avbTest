@@ -1,32 +1,28 @@
-
 # AVB Frontend Assesment
 
 ## User Story
 
 As a user, I would like to be able to read a list of comments, add a comment, and see a list of the top 3 commenters.
 
-
 ### Tasks
 
 > Please add comments to help explain decisions and add a summary to the README
 
-1) Use Material-UI theme for custom color scheme(primary and secondary colors)
-2) Display list of comments
-   1) Comment UI should consist of avatar(first initial or first + last initial), name, and comment
-   2) `store/api` has mock comments
-   3) Extra: fetch from API to display initial comments instead of mock comments
-3) Facilitate adding a comment via modal with input fields(name and comment), and submit button
-4) Display a list of top 3 commenters
-   1) Ui should consist of avatar(same as above) name, and comment count
-   2) Should be listed in descending order of comment count
-
+1. Use Material-UI theme for custom color scheme(primary and secondary colors)
+2. Display list of comments
+   1. Comment UI should consist of avatar(first initial or first + last initial), name, and comment
+   2. `store/api` has mock comments
+   3. Extra: fetch from API to display initial comments instead of mock comments
+3. Facilitate adding a comment via modal with input fields(name and comment), and submit button
+4. Display a list of top 3 commenters
+   1. Ui should consist of avatar(same as above) name, and comment count
+   2. Should be listed in descending order of comment count
 
 ### Useful Links
 
-* https://v4.mui.com/
-* https://redux-toolkit.js.org/
-* https://jsonplaceholder.typicode.com/comments
-
+- https://v4.mui.com/
+- https://redux-toolkit.js.org/
+- https://jsonplaceholder.typicode.com/comments
 
 # Getting Started with Create React App
 
@@ -98,3 +94,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Comments On My Process
+
+to summarize all of my decisions, i first went and built out the UI, i found using Rows and Col's would be the most effective method so i can easily divide the comments & the top comments. i initally filled in the texts with dummy text. from there i decided to grab the API and map through the data, so i can accurately see all of the comments. once that was done i used MUI and made a button that opens a modal where i can add a new comment. once that was done i handled the appropiate logic in order to add comments. after some style changes and adding avatar logic, i decided to move onto the top comments. this took some time to determine how to rank comments, but i then decided that using a forEach would be the best approach to check for duplicates. i then sorted though the most ranked and solved the top comments.

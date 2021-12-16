@@ -12,7 +12,7 @@ import { purple } from "@mui/material/colors";
 function App() {
   const [comments, setComments] = React.useState(mockComments);
   const [showModal, setShowModal] = React.useState(false);
-
+  // MUI logic to use primary & secondary themes
   const theme = createTheme({
     palette: {
       primary: {

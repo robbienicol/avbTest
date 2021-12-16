@@ -4,6 +4,7 @@ import Avatar from "@mui/material/Avatar";
 import "./CommentSection.css";
 
 const CommentSection = ({ setShowModal, comments }) => {
+  //reversed so i can show the newest comments first
   const Comments = comments.reverse().map((e) => {
     return (
       <Paper className="paper">

@@ -4,6 +4,8 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+
+//would typically like CSS to be handled in a differnt file, but the docs insisted this is the correct way to go about it in MUI
 const style = {
   position: "absolute",
   top: "50%",
@@ -25,6 +27,7 @@ export default function AddModal({
   const [nameInput, setNameInput] = React.useState("");
   const [commentInput, setCommentInput] = React.useState("");
   const HandleClose = () => setShowModal(false);
+  //spreading through the array and then adding a new object based on the inputs
   const AddUser = () => {
     setComments([
       { id: comments.length + 1, name: nameInput, comment: commentInput },

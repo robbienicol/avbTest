@@ -3,13 +3,16 @@ import Avatar from "@mui/material/Avatar";
 
 const TopComments = ({ comments }) => {
   let counts = {};
+  //this function checks to see how many times a name is duplicated
   comments.forEach((x) => {
     counts[x.name] = (counts[x.name] || 0) + 1;
   });
   var result = Object.keys(counts).map((e) => ({ name: e, count: counts[e] }));
+  //this sorts the result in order
   const sortInOrder = result.sort(function (a, b) {
     return parseFloat(b.count) - parseFloat(a.count);
   });
+  //this chops down the results to the top 3
   const topThree = sortInOrder.slice(0, 3);
   const finalThree = topThree.map((e) => {
     return (
